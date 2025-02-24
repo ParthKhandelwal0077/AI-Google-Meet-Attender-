@@ -1,0 +1,9 @@
+{"level":"info","message":"::1 - - [07/Feb/2025:13:02:46 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:02:46.053Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:03:25 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:03:25.125Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:17:52 +0000] \"GET / HTTP/1.1\" 200 11 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:17:52.386Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:26:06 +0000] \"POST / HTTP/1.1\" 404 140 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:26:06.872Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:26:20 +0000] \"POST /api/meetings HTTP/1.1\" 400 51 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:26:20.158Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:33:26 +0000] \"POST /api/meetings HTTP/1.1\" 400 51 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:33:26.925Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:34:18 +0000] \"POST /api/meetings HTTP/1.1\" 400 51 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:34:18.486Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:46:42 +0000] \"POST /api/meetings HTTP/1.1\" 400 51 \"-\" \"PostmanRuntime/7.43.0\"","timestamp":"2025-02-07T13:46:42.674Z"}
+{"level":"info","message":"::1 - - [07/Feb/2025:13:53:02 +0000] \"POST /api/meetings HTTP/1.1\" 201 432 \"http://localhost:5173/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-07T13:53:02.486Z"}
