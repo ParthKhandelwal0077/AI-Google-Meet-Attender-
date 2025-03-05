@@ -21,6 +21,10 @@ const meetingSchema = new mongoose.Schema({
             message: 'Meeting time must be in the future'
         }
     },
+    meetingName: {  // New field to store the name that will be used to join the meeting
+        type: String,
+        required: true
+    },
     photo: {
         fileId: {
             type: mongoose.Schema.Types.ObjectId,
@@ -58,4 +62,4 @@ meetingSchema.pre('save', function(next) {
 
 const Meeting = mongoose.model('Meeting', meetingSchema);
 
-module.exports = Meeting; 
+module.exports = Meeting;

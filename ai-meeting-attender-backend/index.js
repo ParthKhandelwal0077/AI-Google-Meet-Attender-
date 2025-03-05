@@ -8,6 +8,7 @@ const { initBucket } = require('./config/gridfs');
 const requestLogger = require('./middleware/requestLogger');
 const errorHandler = require('./middleware/errorHandler');
 const router = require('./routes/root');
+const { fetchAndScheduleMeetings } = require('./scheduler/meetingScheduler');
 // Load environment variables
 dotenv.config();
 
@@ -48,9 +49,11 @@ mongoose.connect(process.env.MONGODB_URI)
         if (!fs.existsSync(uploadsDir)) {
             fs.mkdirSync(uploadsDir);
         }
+        
 
         // Start the server
         app.listen(port, () => {
+            fetchAndScheduleMeetings(); 
             console.log(`Server is running on port ${port}`);
         });
     })

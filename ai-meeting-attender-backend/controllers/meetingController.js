@@ -45,6 +45,7 @@ exports.createMeeting = async (req, res) => {
             const meeting = new Meeting({
                 meetingLink: req.body.meetingLink,
                 meetingTime: new Date(req.body.meetingTime),
+                meetingName: req.body.meetingName,
                 photo: {
                     fileId: fileInfo.fileId,
                     filename: fileInfo.filename,
