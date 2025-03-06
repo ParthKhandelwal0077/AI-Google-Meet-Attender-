@@ -2,22 +2,22 @@ const puppeteer = require('puppeteer');
 
 
 
-async function testPuppeteerDetection() {
-    const browser = await puppeteer.launch({
-        headless: false, // Set to true in production
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox'
-        ]
-    });
+// async function testPuppeteerDetection() {
+//     const browser = await puppeteer.launch({
+//         headless: false, // Set to true in production
+//         args: [
+//             '--no-sandbox',
+//             '--disable-setuid-sandbox'
+//         ]
+//     });
 
-    const page = await browser.newPage();
+//     const page = await browser.newPage();
 
-    // Test User-Agent and WebDriver Detection
-    await page.goto('https://bot.sannysoft.com', { waitUntil: 'networkidle2' });
+//     // Test User-Agent and WebDriver Detection
+//     await page.goto('https://bot.sannysoft.com', { waitUntil: 'networkidle2' });
 
-    console.log("Test loaded. Check manually if Puppeteer is detected.");
-}
+//     console.log("Test loaded. Check manually if Puppeteer is detected.");
+// }
 async function joinMeeting(meetingURL, meetingName) {
     
     console.log(`Launching Puppeteer for meeting: ${meetingURL}`);
@@ -28,7 +28,7 @@ async function joinMeeting(meetingURL, meetingName) {
     });
 
 
-testPuppeteerDetection();
+// testPuppeteerDetection();
     const page = await browser.newPage();
     try {
         await page.goto(meetingURL, { waitUntil: 'networkidle2' });
