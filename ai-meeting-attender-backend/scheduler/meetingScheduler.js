@@ -52,6 +52,6 @@ function scheduleExactMeeting(meeting) {
 }
 
 // Run the scheduler every 5 minutes
-cron.schedule('*/5 * * * *', fetchAndScheduleMeetings);
+cron.schedule('*/1 * * * *', fetchAndScheduleMeetings);
 
 module.exports = { fetchAndScheduleMeetings };

@@ -55,18 +55,15 @@ testPuppeteerDetection();
         console.log(`Entered name: ${meetingName}`);
 
         // Click the 'Ask to join' button
-        await page.waitForSelector('button[aria-label="Ask to join"], div[role="alertdialog"]', { timeout: 10000 });
+        const askToJoinButton = await page.waitForSelector("button:has(span.UywwFc-RLmnJb)", { timeout: 10000 });
 
-        // Check if rejected
-        const rejectionMessage = await page.$('div[role="alertdialog"]');
-        if (rejectionMessage) {
-            console.log('❌ Google Meet rejected the join request. Host approval is required.');
-            return;
+        if (askToJoinButton) {
+            await askToJoinButton.click();
+            console.log("✅ Clicked on 'Ask to Join' button");
+        } else {
+            console.log("❌ 'Ask to Join' button not found.");
         }
-    
-        // If 'Ask to Join' is available, click it
-        await page.click('button[aria-label="Ask to join"]');
-        console.log('✅ Clicked on Ask to Join');
+     
     } catch (error) {
         console.error('Error joining the meeting:', error);
     }
